@@ -1,8 +1,21 @@
+ @font-face {
+  font-family: Hipster; font-weight: bold; src: url('../fonts/hipster.ttf');
+ }
+
 body {
   background-color: #5E60A5;
 }
+<<<<<<< HEAD
 #title {
   font-family: "Raleway", sans-serif;
   text-align: center;
   color: white;
+=======
+
+h1 {
+  font-family: Hipster, sans-serif;
+  font-size: 180px;
+  color: white;
+  text-align: center;
+>>>>>>> ac37d4545e6d4d4e73c164916fbbf05e7ff2d645
 }
