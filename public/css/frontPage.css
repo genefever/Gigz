@@ -25,6 +25,11 @@ body {
   background-position: center center;
 }
 
+/*#title {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  color: white;*/
+
 h1 {
   font-family: Hipster, sans-serif;
   font-size: 180px;
