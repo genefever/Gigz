@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 
-app.use(express.static('public/css')); // get the css file in public
+app.use(express.static('public')); // get the css file in public
 app.set("view engine", "ejs");
 
 
