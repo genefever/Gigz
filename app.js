@@ -1,9 +1,17 @@
 var express = require('express');
+var bodyParser = require('body-parser');
+
+
+
 var app = express();
 
+var port = process.env.PORT || 3000;
 
-app.use(express.static('public')); // get the css file in public
+/* set up the environment */
+app.use(bodyParser.urlencoded({extended:true})); // telling express to use body-parser
 app.set("view engine", "ejs");
+app.use(express.static('public')); // get the css file in public
+
 
 
 app.get('/', (req, res)=>{
@@ -19,6 +27,9 @@ app.get('/secondPage', (req,res)=>{
   res.send('secondPage');
 });
 
-app.listen(3000, ()=>{
+
+
+
+app.listen(port, ()=>{
   console.log("Server listen in localhost 3000.....");
 })

@@ -17,8 +17,12 @@
   },
   "homepage": "https://github.com/genefever/Gigz#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "connect": "^3.5.0",
     "ejs": "^2.5.2",
     "express": "^4.14.0",
-    "jquery": "^3.1.1"
+    "express-logger": "0.0.3",
+    "jquery": "^3.1.1",
+    "path": "^0.12.7"
   }
 }

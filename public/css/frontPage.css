@@ -1,3 +1,8 @@
 body {
-  background-color: red;
+  background-color: #5E60A5;
+}
+#title {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  color: white;
 }
