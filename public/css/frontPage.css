@@ -3,12 +3,41 @@
  }
 
 body {
-  background-color: #5E60A5;
+  background-color: #000;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.fader {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index: -99;
+
+  background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*Use center center in place of 300 200 to center bg image*/
+  background-position: center center;
 }
 
 h1 {
   font-family: Hipster, sans-serif;
   font-size: 180px;
-  color: white;
+  color: #FFF;
   text-align: center;
+  padding-top: 90px;
+}
+
+input {
+    color: #FFF;
+    border: none;
+}
+
+.white, .white a {
+  color: #FFF;
 }
