@@ -1,0 +1,14 @@
+ @font-face {
+  font-family: Hipster; font-weight: bold; src: url('../fonts/hipster.ttf');
+ }
+
+body {
+  background-color: #5E60A5;
+}
+
+h1 {
+  font-family: Hipster, sans-serif;
+  font-size: 180px;
+  color: white;
+  text-align: center;
+}
