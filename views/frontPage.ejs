@@ -22,13 +22,19 @@
                     </ul>
                 </div>
                 <input type="hidden" name="search_param" value="all" id="search_param">
-                <input type="text" class="form-control" name="x" placeholder="Search">
+                <input type="text" id="text-search" class="form-control" name="x" placeholder="Search">
                 <span class="input-group-btn">
-                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    <button class="btn btn-default" type="button" onclick="processClick()"><span class="glyphicon glyphicon-search"></span></button>
                 </span>
             </div>
         </div>
 	</div>
 </div>
+
+
+<!-- Core JS Files -->
+<script src="js/jquery.min.js" type="text/javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/frontPage.js" type="text/javascript"></script>
 
 <% include partials/footers %>

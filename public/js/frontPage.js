@@ -29,7 +29,7 @@ $(document).ready(function(e){
 
 		setInterval(function() {
 			count = Math.floor(Math.random() * 18);
-			// 
+			//
 			// if(count == images.length) {
 			// 	count = 0;
 			// }
@@ -48,4 +48,19 @@ $(document).ready(function(e){
 		$('.search-panel span#search_concept').text(concept);
 		$('.input-group #search_param').val(param);
 	});
+});
+
+function processClick() {
+	console.log("yay");
+	// window.location.href = "secondPage";
+}
+
+// Trigger a click when Enter key is pressed
+document.getElementById("text-search")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+
+    if (event.keyCode == 13) {
+        processClick();
+    }
 });

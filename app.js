@@ -24,7 +24,7 @@ app.get('/login', (req, res) => {
 });
 
 app.get('/secondPage', (req,res)=>{
-  res.send('secondPage');
+  res.render('secondPage');
 });
 
 
