@@ -23,7 +23,7 @@ app.get('/login', (req, res) => {
   res.send('Login');
 });
 
-app.post('/secondPage', (req,res)=>{
+app.get('/secondPage', (req,res)=>{
   res.render('secondPage');
 });
 

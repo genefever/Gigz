@@ -51,6 +51,8 @@ $(document).ready(function(e){
 });
 
 function processClick() {
+	// clear the text field after entering something
+	$("#text-search").val("");
 	console.log("yay");
 	// window.location.href = "secondPage";
 }
