@@ -27,8 +27,13 @@ app.get('/secondPage', (req,res)=>{
   res.render('secondPage');
 });
 
+app.post('/supportPage', (req, res)=>{
+  res.render('supportPage');
+});
 
-
+app.post('/postPage', (req, res)=>{
+  res.render('postPage');
+});
 
 app.listen(port, ()=>{
   console.log("Server listen in localhost 3000.....");
