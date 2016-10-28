@@ -27,11 +27,11 @@ app.get('/secondPage', (req,res)=>{
   res.render('secondPage');
 });
 
-app.post('/supportPage', (req, res)=>{
+app.get('/supportPage', (req, res)=>{
   res.render('supportPage');
 });
 
-app.post('/postPage', (req, res)=>{
+app.get('/postPage', (req, res)=>{
   res.render('postPage');
 });
 
