@@ -1,15 +1,205 @@
 <% include partials/headers %>
-  <link rel="stylesheet" type="text/css" href="css/frontPage.css">
+  <link rel="stylesheet" href="css/form-elements.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css">
+
 </head>
 
 <body>
 
-<h1>Post</h1>
+<!-- Top content -->
+<div class="top-content">
+
+    <div class="inner-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text">
+                    <h1 id="post-title"><strong>Post</strong></h1>
+                    <!-- <div class="description">
+                      <p>
+                        This is a free responsive multi-step registration form made with Bootstrap.
+                        Download it on <a href="http://azmind.com"><strong>AZMIND</strong></a>, customize and use it as you like!
+                      </p>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 form-box">
+
+                  <form role="form" action="" method="post" class="registration-form">
+
+                    <fieldset>
+                      <div class="form-top">
+                        <div class="form-top-left">
+                          <h3>Which of these applies?</h3>
+                            <!-- <p></p> -->
+                        </div>
+
+                        <div class="form-top-right">
+                          <i class="fa fa-user"></i>
+                        </div>
+                        </div>
+                        <div class="form-bottom">
+                          <div class="radio radio-primary">
+                              <input type="radio" name="radio2" id="radio3" value="option1">
+                              <label for="radio3">
+                                  I want to hire someone
+                              </label>
+                          </div>
+                          <div class="radio radio-primary">
+                              <input type="radio" name="radio2" id="radio4" value="option2" checked>
+                              <label for="radio4">
+                                  I have a service to offer
+                              </label>
+                          </div>
+
+                          <hr/>
+                          <div class="text-right content-padding">
+                            <button style="float: right top"type="button" class="btn btn-next ">Next</button>
+                          </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <div class="form-top">
+                      <div class="form-top-left">
+                        <h3>Please choose a category:</h3>
+                      </div>
+
+                      <div class="form-top-right">
+                        <i class="fa fa-user"></i>
+                      </div>
+                      </div>
+                      <div class="form-bottom">
+                        <div class="radio radio-primary">
+                            <input type="radio" name="radio2" id="radio3" value="option1">
+                            <label for="radio3">
+                                Creative gigs - <i>photography, illustration projects, design</i>
+                            </label>
+                        </div>
+                        <div class="radio radio-primary">
+                            <input type="radio" name="radio2" id="radio4" value="option2" checked>
+                            <label for="radio4">
+                                Computer gigs - <i>web design, projects, tutoring</i>
+                            </label>
+                        </div>
+                        <div class="radio radio-primary">
+                            <input type="radio" name="radio2" id="radio4" value="option2" checked>
+                            <label for="radio4">
+                                Talent gigs - <i>music, dance, modeling, acting, etc</i>
+                            </label>
+                        </div>
+                        <div class="radio radio-primary">
+                            <input type="radio" name="radio2" id="radio4" value="option2" checked>
+                            <label for="radio4">
+                                Household gigs - <i>babysitting, cleaning, gardening, home care, etc</i>
+                            </label>
+                        </div>
+                        <div class="radio radio-primary">
+                            <input type="radio" name="radio2" id="radio4" value="option2" checked>
+                            <label for="radio4">
+                                Event gigs - <i>catering, wedding photography, parties, etc</i>
+                            </label>
+                        </div>
+                        <div class="radio radio-primary">
+                            <input type="radio" name="radio2" id="radio4" value="option2" checked>
+                            <label for="radio4">
+                                Labor gigs - <i>includes moving & hauling</i>
+                            </label>
+                        </div>
+
+                        <hr/>
+                        <div class="text-right content-padding">
+                          <button type="button" class="btn btn-previous">Previous</button>
+                          <button type="button" class="btn btn-next">Next</button>
+                        </div>
+                  </div>
+                </fieldset>
+
+                  <fieldset>
+                      <div class="form-top">
+                        <div class="form-top-left">
+                          <h3>Contact Info</h3>
+                        </div>
+                        <div class="form-top-right">
+                          <i class="fa fa-key"></i>
+                        </div>
+                        </div>
+                        <div class="form-bottom">
+                        <div class="form-group">
+                          <label class="sr-only" for="form-email">Email</label>
+                          <input type="text" name="form-email" placeholder="Email" class="form-email form-control" id="form-email">
+                        </div>
+                        <div class="form-group">
+                          <label class="sr-only" for="form-tel">Phone</label>
+                          <input type="text" name="form-tel" placeholder="Phone number" class="form-tel form-control" id="form-tel">
+                        </div>
+
+                        <p>Contact by:</p>
+                            <div class="radio radio-primary radio-inline">
+                                <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked>
+                                <label for="inlineRadio1">phone call</label>
+                            </div>
+                            <div class="radio radio-primary">
+                                <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                                <label for="inlineRadio2">text message</label>
+                            </div>
+
+                            <hr />
+
+                              <div class="text-right content-padding">
+                                <button type="button" class="btn btn-previous">Previous</button>
+                                <button type="button" class="btn btn-next">Next</button>
+                              </div>
+                            </div>
+                  </fieldset>
+
+                  <fieldset>
+                      <div class="form-top">
+                        <div class="form-top-left">
+                          <h3>Description</h3>
+                        </div>
+                        <div class="form-top-right">
+                          <i class="fa fa-twitter"></i>
+                        </div>
+                        </div>
+                        <div class="form-bottom">
+                      <div class="form-group">
+                          <input type="text" name="form" placeholder="Title" class="form form-control" id="form">
+                        </div>
+
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                            Select image to upload:
+                            <input type="file" name="myFile"/>
+                            <!-- CHANGE TO BELOW WHEN IMPLEMENTING -->
+                            <!-- <input type="file" onchange="this.form.submit()" name="myFile"/> -->
+                        </form>
+                        <br/>
+                        <div class="form-group">
+                          <textarea class="form-control" placeholder="Posting body" rows="5" id="comment"></textarea>
+                        </div>
+                        <hr/>
+                        <div class="text-right content-padding">
+                          <button type="submit" class="btn">Post</button>
+                        </div>
+                    </div>
+                  </fieldset>
+
+                </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 <!-- Core JS Files -->
 <script src="js/jquery.min.js" type="text/javascript"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-<script src="js/frontPage.js" type="text/javascript"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+<script src="js/retina-1.1.0.min.js"></script>
+<script src="js/scripts.js"></script>
 
 </body>
 

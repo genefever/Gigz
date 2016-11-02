@@ -412,3 +412,8 @@ body {
 	padding: 10px 17px;
 	font-size: 27px;
 }
+
+/*Modal-Carousel*/
+/*.modal.and.carousel {
+  position: absolute; // Needed because the carousel overrides the position property
+}*/
