@@ -16,11 +16,7 @@ app.use(express.static('public')); // get the css file in public
 
 app.get('/', (req, res)=>{
   // res.send('Hello Mo better!!');
-  res.render("frontPage");
-});
-
-app.get('/login', (req, res) => {
-  res.send('Login');
+  res.render("login");
 });
 
 app.get('/secondPage', (req,res)=>{
@@ -34,6 +30,7 @@ app.get('/supportPage', (req, res)=>{
 app.get('/postPage', (req, res)=>{
   res.render('postPage');
 });
+
 
 app.listen(port, ()=>{
   console.log("Server listen in localhost 3000.....");

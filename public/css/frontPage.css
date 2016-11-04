@@ -3,6 +3,8 @@
  }
 
 body {
+  /*background-image: url(../img/background/2) !important; background-repeat: no-repeat !important; background-size: 123px 49px !important;
+  */
   background-color: #000;
   overflow-x: hidden;
   overflow-y: hidden;
