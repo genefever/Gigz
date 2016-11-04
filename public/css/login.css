@@ -5,7 +5,11 @@
 body {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #6e70ae;
+  background: #6f48b7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6f48b7 , #8c6dc5);
+   /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6f48b7 , #8c6dc5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 h1 {
