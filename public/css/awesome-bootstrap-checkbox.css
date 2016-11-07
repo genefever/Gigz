@@ -309,10 +309,6 @@
 
 textarea { resize:vertical ; }
 
-form #swag {
-    display: inline;
-}
-
 input[type="checkbox"].styled:checked + label:after,
 input[type="radio"].styled:checked + label:after {
   font-family: 'FontAwesome';

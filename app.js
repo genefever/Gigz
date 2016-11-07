@@ -16,7 +16,7 @@ app.use(express.static('public')); // get the css file in public
 
 app.get('/', (req, res)=>{
   // res.send('Hello Mo better!!');
-  res.render("login");
+  res.render("frontPage");
 });
 
 app.get('/secondPage', (req,res)=>{
