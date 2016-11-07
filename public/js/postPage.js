@@ -20,12 +20,16 @@ jQuery(document).ready(function() {
 
     $('.registration-form input[type="text"], .registration-form input[type="password"], .registration-form textarea').on('focus', function() {
     	$(this).removeClass('input-error');
+      console.log("Okay it is in here!");
     });
 
     // next step
     $('.registration-form .btn-next').on('click', function() {
+      console.log($('.radio .radio-primary'));
     	var parent_fieldset = $(this).parents('fieldset');
     	var next_step = true;
+
+
 
     	parent_fieldset.find('input[type="text"], input[type="password"], textarea').each(function() {
     		if( $(this).val() == "" ) {

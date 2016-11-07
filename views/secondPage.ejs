@@ -9,213 +9,113 @@
 
   <div class="container">
     <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">Gigz</a>
-            </div>
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Gigz</a>
+        </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="/supportPage">Support</a></li>
-                    <li><a href="/postPage">Post</a></li>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/supportPage">Support</a></li>
+            <li><a href="/postPage">Post</a></li>
 
-                    <!-- <li><a href="#post" data-toggle="modal" data-target=".bs-example-modal-lg">Post</a></li> -->
-                    <!-- <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Separated link</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li> -->
+            <!-- <li><a href="#post" data-toggle="modal" data-target=".bs-example-modal-lg">Post</a></li> -->
+            <!-- <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li> -->
 
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#search"><span class="glyphicon glyphicon-search"></span></a></li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#search"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 </div>
 
 
 <div id="search">
-    <button type="button" class="close">×</button>
-    <form>
+  <button type="button" class="close">×</button>
+  <form>
     <!-- <h3>Get Set...</h3> -->
-        <input type="search" value="" placeholder="Enter keyword(s)" />
-        <button type="submit" class="btn btn-success">Search</button>
-    </form>
+    <input type="search" value="" placeholder="Enter keyword(s)" />
+    <button type="submit" class="btn btn-success">Search</button>
+  </form>
 </div>
 
-  <div class="col-sm-10 col-sm-offset-1">
-   <div class="col-md-4 col-sm-6">
-       <div class="card-container manual-flip">
-          <div class="card">
-              <div class="front">
-                  <div class="cover">
-                      <img src="img/guitar3.jpg"/>
-                  </div>
 
-                  <div class="content">
-                      <div class="main">
-                          <h3 class="name">Private Guitar Lessons</h3>
-                          <p class="profession">La Jolla, CA</p>
-                          <p class="text-center">Charging $20 per hour<br>Phone: (858) 486-1594 <br>Email: mike_smith@gmail.com</p>
-                      </div>
-                      <div class="footer">
-                          <button class="btn btn-simple" onclick="rotateCard(this)">
-                              <i class="fa fa-mail-forward"></i> More Info
-                          </button>
-                      </div>
-                  </div>
-              </div> <!-- end front panel -->
-              <div class="back">
-                  <div class="header">
-                      <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
-                  </div>
-                  <div class="content">
-                      <div class="main">
-                          <h4 class="text-center">Job Description</h4>
-                          <p class="text-center">Special rates this week!</p>
-
-
-
-                      </div>
-                  </div>
-                  <div class="footer">
-                      <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
-                          <i class="fa fa-reply"></i> Back
-                      </button>
-                      <div class="social-links text-center">
-                          <a href="http://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
-                          <a href="http://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
-                          <a href="http://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
-                      </div>
-                  </div>
-              </div> <!-- end back panel -->
-          </div> <!-- end card -->
-      </div> <!-- end card-container -->
-  </div> <!-- end col sm 3 -->
-
-  <div class="col-md-4 col-sm-6">
+<div class="col-sm-10 col-sm-offset-1">
+  <% for(var i=0; i< lists.length; i++) { %>
+    <div class="col-md-4 col-sm-6">
       <div class="card-container manual-flip">
-         <div class="card">
-             <div class="front">
-                 <div class="cover">
-                     <img src="img/guitar2.jpg"/>
-                 </div>
-
-                 <div class="content">
-                     <div class="main">
-                         <h3 class="name">Weekly Guitar Sessions</h3>
-                         <p class="profession">Pacific Beach, CA</p>
-                         <p class="text-center">Weekly practices in a classroom setting.<br>Call to find out more<br>(510) 683-5700</p>
-                     </div>
-                     <div class="footer">
-                         <button class="btn btn-simple" onclick="rotateCard(this)">
-                             <i class="fa fa-mail-forward"></i> More Info
-                         </button>
-                     </div>
-                 </div>
-             </div> <!-- end front panel -->
-             <div class="back">
-                 <div class="header">
-                     <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
-                 </div>
-                 <div class="content">
-                     <div class="main">
-                         <h4 class="text-center">Job Description</h4>
-                         <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
-
-
-
-
-                     </div>
-                 </div>
-                 <div class="footer">
-                     <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
-                         <i class="fa fa-reply"></i> Back
-                     </button>
-                     <div class="social-links text-center">
-                         <a href="http://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
-                         <a href="http://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
-                         <a href="http://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
-                     </div>
-                 </div>
-             </div> <!-- end back panel -->
-         </div> <!-- end card -->
-     </div> <!-- end card-container -->
- </div> <!-- end col sm 3 -->
-
- <div class="col-md-4 col-sm-6">
-     <div class="card-container manual-flip">
         <div class="card">
+
+
             <div class="front">
-                <div class="cover">
-                    <img src="img/guitar1.jpg"/>
-                </div>
-
-                <div class="content">
-                    <div class="main">
-                        <h3 class="name">Electric Guitar Practices</h3>
-                        <p class="profession">Del Mar, CA</p>
-                        <p class="text-center">Please contact me for hourly pricing<br>Phone: (858) 123-4567<br>Email: bob@gmail.com</p>
-                    </div>
-                    <div class="footer">
-                        <button class="btn btn-simple" onclick="rotateCard(this)">
-                            <i class="fa fa-mail-forward"></i> More Info
-                        </button>
-                    </div>
-                </div>
-            </div> <!-- end front panel -->
-            <div class="back">
-                <div class="header">
-                    <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
-                </div>
-                <div class="content">
-                    <div class="main">
-                        <h4 class="text-center">Job Description</h4>
-                        <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...</p>
-
-
-
-                    </div>
-                </div>
-                <div class="footer">
-                    <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
-                        <i class="fa fa-reply"></i> Back
-                    </button>
-                    <div class="social-links text-center">
-                        <a href="http://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
-                        <a href="http://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
-                        <a href="http://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
-                    </div>
-                </div>
-            </div> <!-- end back panel -->
-        </div> <!-- end card -->
-    </div> <!-- end card-container -->
-</div> <!-- end col sm 3 -->
-
- </div>
+              <!-- <div class="cover">
+                <img src="img/guitar3.jpg"/>
+              </div> -->
+            <div class="content">
+              <div class="main">
+                <h3 class="name"><%= lists[i].title %></h3>
+                <p class="profession"><%= lists[i].city %></p>
+                <p class="text-center"><%= lists[i].name %><br>Phone: <%= lists[i].phone %><br><%= lists[i].email %></p>
+              </div>
+              <div class="footer">
+                <button class="btn btn-simple" onclick="rotateCard(this)">
+                  <i class="fa fa-mail-forward"></i> More Info
+                </button>
+              </div>
+            </div>
+          </div> <!--end front panel -->
+          <div class="back">
+            <!-- <div class="header"> -->
+            <!-- </div> -->
+            <div class="content">
+              <div class="main">
+                <h4 class="text-center">Description</h4>
+                <p class="text-center"><%= lists[i].info %></p>
+              </div>
+            </div>
+            <div class="footer">
+              <button class="btn btn-simple" rel="tooltip" title="Flip Card" onclick="rotateCard(this)">
+                <i class="fa fa-reply"></i> Back
+              </button>
+              <div class="social-links text-center">
+                <a href="http://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                <a href="http://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                <a href="http://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+              </div>
+            </div>
+          </div> <!-- end back panel -->
+        </div> <!--end card -->
+      </div> <!-- end card-container -->
+    </div> <!-- end col sm 3 -->
+    <% } %>
+  </div>
 
 
-<!-- Core JS Files -->
-<script src="js/jquery.min.js" type="text/javascript"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-<script src="js/resultsPage.js" type="text/javascript"></script>
+  <!-- Core JS Files -->
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+  <script src="js/secondPage.js" type="text/javascript"></script>
 
 </body>
 
