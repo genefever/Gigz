@@ -73,7 +73,7 @@ a:active {
 .main,
 .container > header {
 	margin: 0 auto;
-	padding: 1em;
+	padding: 1.2em;
 }
 
 .container > header {
@@ -94,6 +94,11 @@ a:active {
 	font-size: 60%;
 	color: #b14943;
 	padding: 0 0 0.6em 0.1em;
+}
+
+span {
+	font-size: 24px;
+	color: #d3d3d3
 }
 
 /* Main Content */
