@@ -38,9 +38,9 @@
             <div class="row">
                 <div class="col-sm-6 col-sm-offset-3 form-box">
 
-                  <form role="form" action="/secondPage" method="GET"  class="registration-form">
+                  <form role="form" action="/secondPagePost" method="POST"  class="registration-form">
 
-                    <fieldset>
+                    <fieldset id="first-form">
                       <div class="form-top">
                         <div class="form-top-left">
                           <h3>Which of these applies?</h3>
@@ -53,13 +53,13 @@
                       </div>
                       <div class="form-bottom">
                         <div class="radio radio-primary">
-                            <input type="radio" name="first-form" id="radio3" value="option1">
+                            <input type="radio" name="first-form" id="radio3" value="hire">
                             <label for="radio3">
                                 I want to hire someone
                             </label>
                         </div>
                         <div class="radio radio-primary">
-                            <input type="radio" name="first-form" id="radio4" value="option2">
+                            <input type="radio" name="first-form" id="radio4" value="offer">
                             <label for="radio4">
                                 I have a service to offer
                             </label>
@@ -67,12 +67,12 @@
 
                           <hr/>
                           <div class="text-right content-padding">
-                            <button style="float: right top"type="button" class="btn btn-next ">Next</button>
+                            <button style="float: right top" type="button" class="btn btn-next ">Next</button>
                           </div>
                       </div>
                   </fieldset>
 
-                  <fieldset>
+                  <fieldset id="second-form">
                     <div class="form-top">
                       <div class="form-top-left">
                         <h3>Please choose a category:</h3>
@@ -96,13 +96,13 @@
                             </label>
                         </div>
                         <div class="radio radio-primary">
-                            <input type="radio" name="radio2" id="radio4" value="option2" >
+                            <input type="radio" name="radio2" id="radio4" value="option3" >
                             <label for="radio4">
                                 Talent gigs - <i>music, dance, modeling, acting, etc</i>
                             </label>
                         </div>
                         <div class="radio radio-primary">
-                            <input type="radio" name="radio2" id="radio4" value="option2" >
+                            <input type="radio" name="radio2" id="radio4" value="option4" >
                             <label for="radio4">
                                 Household gigs - <i>babysitting, cleaning, gardening, home care, etc</i>
                             </label>
@@ -123,12 +123,12 @@
                         <hr/>
                         <div class="text-right content-padding">
                           <button type="button" class="btn btn-previous">Previous</button>
-                          <button type="button" class="btn btn-next">Next</button>
+                          <button type="button" id="second-form" class="btn btn-next">Next</button>
                         </div>
                   </div>
                 </fieldset>
 
-                  <fieldset>
+                  <fieldset id="third-form">
                       <div class="form-top">
                         <div class="form-top-left">
                           <h3>Contact Info</h3>
@@ -149,11 +149,11 @@
 
                         <p>Contact by:</p>
                             <div class="radio radio-primary radio-inline">
-                                <input type="radio" id="inlineRadio1" value="option1" name="radioInline" checked>
+                                <input type="radio" id="inlineRadio1" value="phone-call" name="radioInline" checked>
                                 <label for="inlineRadio1">phone call</label>
                             </div>
                             <div class="radio radio-primary">
-                                <input type="radio" id="inlineRadio2" value="option2" name="radioInline">
+                                <input type="radio" id="inlineRadio2" value="text-message" name="radioInline">
                                 <label for="inlineRadio2">text message</label>
                             </div>
 
@@ -161,12 +161,12 @@
 
                               <div class="text-right content-padding">
                                 <button type="button" class="btn btn-previous">Previous</button>
-                                <button type="button" class="btn btn-next">Next</button>
+                                <button type="button" id="third-form" class="btn btn-next">Next</button>
                               </div>
                             </div>
                   </fieldset>
 
-                  <fieldset>
+                  <fieldset id="fourth-form">
                       <div class="form-top">
                         <div class="form-top-left">
                           <h3>Description</h3>
@@ -180,13 +180,13 @@
                           <input type="text" name="form" placeholder="Title" class="form form-control" id="form">
                         </div>
 
-                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <!-- <form action="upload.php" method="post" enctype="multipart/form-data">
                             Select image to upload:
-                            <input type="file" name="myFile"/>
+                            <input type="file" name="myFile"/> -->
                             <!-- CHANGE TO BELOW WHEN IMPLEMENTING -->
                             <!-- <input type="file" onchange="this.form.submit()" name="myFile"/> -->
-                        </form>
-                        <br/>
+                        <!-- </form> -->
+                        <!-- <br/> -->
                         <div class="form-group">
                           <textarea class="form-control" placeholder="Posting body" rows="5" id="comment"></textarea>
                         </div>

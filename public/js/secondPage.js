@@ -9,6 +9,7 @@ function rotateCard(btn){
 }
 
 $(function () {
+
     $('a[href="#search"]').on('click', function(event) {
         event.preventDefault();
         $('#search').addClass('open');

@@ -39,6 +39,25 @@ app.get('/postPage', (req, res)=>{
   res.render('postPage');
 });
 
+/* handle post request for postPage.ejs */
+app.post('/secondPagePost',(req,res) => {
+
+  /* get the data from the json file and append it to the new one */
+  console.log(req.body);
+  fs.readFile('info.json',(err, data)=>{
+    var jsonData = JSON.parse(data); // turn it into an object
+    // console.log(jsonData);
+    if(req.body.type){
+      jsonData.lists.push(req.body);
+    }
+    fs.writeFile("info.json",JSON.stringify(jsonData), (err)=>{
+      if(err) throw err;
+      console.log("Data has already append to info.json!");
+    });
+  });
+  res.redirect('/secondPage');
+});
+
 
 app.listen(port, ()=>{
   console.log("Server listen in localhost 3000.....");
