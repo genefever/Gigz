@@ -6,8 +6,6 @@ var fs = require('fs');
 console.log("Starting getting file ...");
 
 // get content of the json file and turn it into an object
-var contents = fs.readFileSync("info.json");
-var jsonContent = JSON.parse(contents);
 
 var app = express();
 
@@ -25,7 +23,10 @@ app.get('/', (req, res)=>{
   res.render("frontPage");
 });
 
-app.get('/secondPage', (req,res)=>{
+app.get('/secondPage', (req,res)=>{ 
+  var contents = fs.readFileSync("info.json");
+  var jsonContent = JSON.parse(contents);
+
   res.render('secondPage',{
     lists : jsonContent.lists // get the array of list from the json Object
   });
