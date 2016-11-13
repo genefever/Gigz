@@ -10,7 +10,7 @@ console.log("Starting getting file ...");
 var app = express();
 
 var port = process.env.PORT || 3000;
-
+var searches = [];
 /* set up the environment */
 app.use(bodyParser.urlencoded({extended:true})); // telling express to use body-parser
 app.set("view engine", "ejs");
@@ -28,8 +28,10 @@ app.get('/secondPage', (req,res)=>{
   var jsonContent = JSON.parse(contents);
 
   res.render('secondPage',{
+
     lists : jsonContent.lists // get the array of list from the json Object
   });
+  searches = [];
 });
 
 app.get('/supportPage', (req, res)=>{
@@ -38,6 +40,24 @@ app.get('/supportPage', (req, res)=>{
 
 app.get('/postPage', (req, res)=>{
   res.render('postPage');
+});
+
+app.post('/searchPost',(req, res)=>{
+  var searchVal = req.param('search1', null);
+  console.log(searchVal);
+  var contents = fs.readFileSync("info.json");
+  var jsonContent = JSON.parse(contents);
+  var abc = jsonContent.lists;
+  searchVal = searchVal.toLowerCase();
+  for (var i = 0; i < abc.length; i++) {
+    if((abc[i].title.toLowerCase()).includes(searchVal) || searchVal === "")
+      searches.push(abc[i]);
+  }
+  res.render('secondPage',{
+
+     lists : searches// get the array of list from the json Object
+  });
+  searches = [];
 });
 
 /* handle post request for postPage.ejs */

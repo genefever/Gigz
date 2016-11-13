@@ -20,7 +20,7 @@
 			</header>
 			<div class="main clearfix">
 				<span>Learn a new skill. Spread the knowledge.</span>
-				<form id="nl-form" class="nl-form" action="/secondPage" method="GET">
+				<form id="nl-form" class="nl-form" action="/searchPost" method="POST">
 					I am
 					<select>
 						<option value="1" selected>looking for</option>
@@ -28,7 +28,7 @@
 					</select>
 					<br />
 
-					<input type="text" value="" placeholder="any" data-subline="Example: <em>lawn mowing</em> or <em>guitar lessons</em>"/>
+					<input type="text" value="" name="search1" placeholder="any" data-subline="Example: <em>lawn mowing</em> or <em>guitar lessons</em>"/>
 					Gigz near
 
 					<input type="text" value="" placeholder="me" data-subline="Example: <em>Los Angeles</em> or <em>New York</em>"/>
@@ -38,11 +38,8 @@
 
 					</div>
 					<div class="nl-overlay"></div>
-
+					<button class="btn btn-4 btn-4a icon-arrow-right" type="submit">Continue</button></a>
 				</form>
-
-				<a href="/secondPage"><button class="btn btn-4 btn-4a icon-arrow-right" type="submit">Continue</button></a>
-
 			</div>
 		</div><!-- /container -->
 
