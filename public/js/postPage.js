@@ -78,7 +78,7 @@ jQuery(document).ready(function() {
       var contactOption = $('input[name=radioInline]:checked').val();
       json.email = emailAddress;
       json.phone = telephonNum;
-      json.contactOption = contactOption;
+      json.contact = contactOption;
       json.city = city;
       console.log('form email', emailAddress);
       console.log('form tel', telephonNum);
@@ -147,7 +147,7 @@ jQuery(document).ready(function() {
       var $form = $('.registration-form').attr('action');
 
       var posting = $.post($form, json, (data, status)=>{
-        // this.submit();
+        this.submit();
       });
 
 
