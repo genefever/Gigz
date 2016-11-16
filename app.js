@@ -23,15 +23,10 @@ app.get('/', (req, res)=>{
   res.render("frontPage");
 });
 
-<<<<<<< HEAD
 
 app.get('/secondPage', (req,res)=>{
-=======
-app.get('/secondPage', (req,res)=>{ 
   var contents = fs.readFileSync("info.json");
   var jsonContent = JSON.parse(contents);
-
->>>>>>> 15ef454e1ae78f5778c243e00a1fd4e14a959bc8
   res.render('secondPage',{
 
     lists : jsonContent.lists // get the array of list from the json Object
@@ -47,33 +42,6 @@ app.get('/postPage', (req, res)=>{
   res.render('postPage');
 });
 
-<<<<<<< HEAD
-/* handle the search request */
-app.get('/searchPost',(req,res)=>{
-  // console.log(req.query);
-  var searchVal = req.query.search;
-  console.log(searchVal);
-  var lists = [];
-  fs.readFile('infor.json',(err,data) => {
-    var jsonData = JSON.parse(data);
-    lists = jsonData.lists;
-  });
-
-  lists.forEach((obj) =>{
-    if(obj.name === searchVal){
-      return obj;
-    } else {
-      // send back something error
-    }
-  });
-  res.redirect('/secondPage', {objectToRender: obj});
-  // res.send('HERLLW');
-});
-
-
-
-
-=======
 app.post('/searchPost',(req, res)=>{
   var searchVal = req.param('search1', null);
   var contents = fs.readFileSync("info.json");
@@ -91,7 +59,7 @@ app.post('/searchPost',(req, res)=>{
   searches = [];
 });
 
->>>>>>> 15ef454e1ae78f5778c243e00a1fd4e14a959bc8
+
 /* handle post request for postPage.ejs */
 app.post('/secondPagePost',(req,res) => {
 
