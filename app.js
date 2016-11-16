@@ -25,6 +25,7 @@ app.get('/', (req, res)=>{
   res.render("frontPage");
 });
 
+
 app.get('/secondPage', (req,res)=>{
   res.render('secondPage',{
     lists : jsonContent.lists // get the array of list from the json Object
@@ -38,6 +39,31 @@ app.get('/supportPage', (req, res)=>{
 app.get('/postPage', (req, res)=>{
   res.render('postPage');
 });
+
+/* handle the search request */
+app.get('/searchPost',(req,res)=>{
+  // console.log(req.query);
+  var searchVal = req.query.search;
+  console.log(searchVal);
+  var lists = [];
+  fs.readFile('infor.json',(err,data) => {
+    var jsonData = JSON.parse(data);
+    lists = jsonData.lists;
+  });
+
+  lists.forEach((obj) =>{
+    if(obj.name === searchVal){
+      return obj;
+    } else {
+      // send back something error
+    }
+  });
+  res.redirect('/secondPage', {objectToRender: obj});
+  // res.send('HERLLW');
+});
+
+
+
 
 /* handle post request for postPage.ejs */
 app.post('/secondPagePost',(req,res) => {
@@ -57,6 +83,8 @@ app.post('/secondPagePost',(req,res) => {
   });
   res.redirect('/secondPage');
 });
+
+
 
 
 app.listen(port, ()=>{

@@ -22,8 +22,13 @@ $(function () {
         }
     });
 
-    $('form').submit(function(event) {
-        event.preventDefault();
-        return false;
-    })
+    // $('form').submit(function(event) {
+      // var value = $('form input').val();
+      // var $form = $('form').attr("action");
+      // console.log($('form input').val());
+      // $.get($form, {"value":value}, (data,status) => {
+        // this.submit();
+      // });
+        // return false;
+    // });
 });

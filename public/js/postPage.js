@@ -145,7 +145,7 @@ jQuery(document).ready(function() {
       var $form = $('.registration-form').attr('action');
 
       var posting = $.post($form, json, (data, status)=>{
-        this.submit();
+        // this.submit();
       });
 
 
