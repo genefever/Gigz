@@ -17,18 +17,10 @@ $(function () {
     });
 
     $('#search, #search button.close').on('click keyup', function(event) {
+
         if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
             $(this).removeClass('open');
         }
     });
 
-    // $('form').submit(function(event) {
-      // var value = $('form input').val();
-      // var $form = $('form').attr("action");
-      // console.log($('form input').val());
-      // $.get($form, {"value":value}, (data,status) => {
-        // this.submit();
-      // });
-        // return false;
-    // });
 });

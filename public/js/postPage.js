@@ -74,10 +74,12 @@ jQuery(document).ready(function() {
       // get the third form for radio button and all the value
       var emailAddress = $('#form-email').val();
       var telephonNum = $('#form-tel').val();
+      var city = $('#form-city').val();
       var contactOption = $('input[name=radioInline]:checked').val();
       json.email = emailAddress;
       json.phone = telephonNum;
       json.contactOption = contactOption;
+      json.city = city;
       console.log('form email', emailAddress);
       console.log('form tel', telephonNum);
       console.log('contact option', contactOption);
