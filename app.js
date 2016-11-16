@@ -44,7 +44,6 @@ app.get('/postPage', (req, res)=>{
 
 app.post('/searchPost',(req, res)=>{
   var searchVal = req.param('search1', null);
-  console.log(searchVal);
   var contents = fs.readFileSync("info.json");
   var jsonContent = JSON.parse(contents);
   var abc = jsonContent.lists;
