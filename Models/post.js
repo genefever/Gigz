@@ -19,7 +19,7 @@ module.exports = (sequelize,DataTypes) => {
     phone:{
       type:DataTypes.INTEGER,
       validate: {
-        len:[1,10],
+        len:[1,15],
         isNumeric: true // will only allow numbers
       }
     },

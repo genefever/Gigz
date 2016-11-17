@@ -9,56 +9,55 @@ var fs = require('fs'),
 router.get('/',(req,res) => {
   /* get the item from the database */
   db.post.all().then((posts)=>{
+    console.log("This is what the post will be");
     console.log(posts); // what will the post be
     res.render('secondPage',{
-      lists: posts // get the array of hte post list
+      lists: posts // get the array of the post list
+    }, (err,html)=>{
+      res.send(200,html); // show status quote
     });
   });
-  var contents = fs.readFileSync("info.json");
-  var jsonContent = JSON.parse(contents);
-  res.render('secondPage',{
-    lists : jsonContent.lists // get the array of list from the json Object
-  });
-  searches = [];
+  // var contents = fs.readFileSync("info.json");
+  // var jsonContent = JSON.parse(contents);
+  // res.render('secondPage',{
+  //   lists : jsonContent.lists // get the array of list from the json Object
+  // });
+  // searches = [];
 });
 
 
 router.get('/searchPost',(req, res)=>{
+  console.log("go through here");
   var query = req.params.search1;
   /* search through all the post in the db */
   db.post.findAll({
     where:{
       $or:[
         {
-          title:{
-            $like: query
-          }
+          title:query
         },
         {
-          type:{
-            $like:query
-          }
+          type:query
         },
         {
-          category:{
-            $like:query
-          }
+          category:query
         },
         {
-          city:{
-            $like:query
-          }
+          city:query
         },{
-          info:{
-            $like: query
-          }
+          info:query
         }
       ]
     }
 }).then((posts) => {
+  console.log(posts);
+
   res.render('secondPage',{
     lists: posts
   });
+  return res.status(200);
+}).catch((e)=>{
+  res.status(400).json(e);
 });
 
   // var searchVal = req.param('search1', null);
