@@ -28,35 +28,44 @@ router.get('/',(req,res) => {
 
 router.get('/searchPost',(req, res)=>{
   console.log("go through here");
-  var query = req.params.search1;
+  console.log(req.query);
+  var queryParam = req.query.search1;
+  console.log(queryParam);
+
   /* search through all the post in the db */
   db.post.findAll({
     where:{
-      $or:[
-        {
-          title:query
-        },
-        {
-          type:query
-        },
-        {
-          category:query
-        },
-        {
-          city:query
-        },{
-          info:query
-        }
-      ]
+      // $or:[
+        // {
+          title:queryParam
+        // }
+      //   {
+      //     type:queryParam
+      //   },
+      //   {
+      //     category:queryParam
+      //   },
+      //   {
+      //     city:queryParam
+      //   },{
+      //     info:queryParam
+      //   }
+      // ]
     }
 }).then((posts) => {
   console.log(posts);
+  if(posts.length === 0){
+    res.redirect('/secondPage');
+    return res.status(404).send('no post is found');
+  } else {
+    res.render('secondPage',{
+      lists: posts
+    });
+    return res.status(200);
+  }
 
-  res.render('secondPage',{
-    lists: posts
-  });
-  return res.status(200);
 }).catch((e)=>{
+  console.log("here");
   res.status(400).json(e);
 });
 
