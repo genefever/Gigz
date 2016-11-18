@@ -64,16 +64,14 @@ router.get('/searchPost',(req, res)=>{
     //   lists: posts
     // });
     // console.log('herererere');
-    return res.status(200).redirect('/serachPost?'+posts);
+    return res.status(200).render('secondPage',{
+      lists:posts
+    });
   }
 
 }).catch((e)=>{
   console.log("here");
   res.status(400).json(e);
-});
-
-router.get('/searchPost?',(req,res)=>{
-  res.send(req.query);
 });
 
   // var searchVal = req.param('search1', null);
