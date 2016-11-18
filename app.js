@@ -48,7 +48,7 @@ app.post('/searchPost',(req, res)=>{
   var jsonContent = JSON.parse(contents);
   var abc = jsonContent.lists;
   searchVal = searchVal.toLowerCase();
-  
+
   for (var i = 0; i < abc.length; i++) {
     if((abc[i].title.toLowerCase()).includes(searchVal) || searchVal === "")
       searches.push(abc[i]);

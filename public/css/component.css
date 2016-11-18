@@ -20,97 +20,6 @@
 	font-style: normal;
 }
 
-/* General button style (reset) */
-.btn {
-	border: none;
-	font-family: inherit;
-	font-size: inherit;
-	color: inherit;
-	background: none;
-	cursor: pointer;
-	padding: 25px 80px;
-	display: inline-block;
-	margin: 15px 30px;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: 700;
-	outline: none;
-	position: relative;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-.btn:after {
-	content: '';
-	position: absolute;
-	z-index: -1;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-/* Button 4 */
-.btn-4 {
-	border-radius: 50px;
-	border: 3px solid #fff;
-	color: #fff;
-	overflow: hidden;
-}
-
-.btn-4:active {
-	border-color: #44146f;
-	color: #44146f;
-}
-
-.btn-4:hover {
-	/*background: #551A8B;*/
-	background: rgba(85, 26, 139, 0.5);
-}
-
-.btn-4:before {
-	position: absolute;
-	height: 100%;
-	font-size: 125%;
-	line-height: 3.5;
-	color: #fff;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
-	transition: all 0.3s;
-}
-
-.btn-4:active:before {
-	color: #44146f;
-}
-
-/* Button 4a */
-.btn-4a:before {
-	left: 130%;
-	top: 0;
-}
-
-.btn-4a:hover:before {
-	left: 80%;
-}
-
-/* Pseudo elements for icons */
-.btn:before {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	position: absolute;	/* changed from relative */
-	-webkit-font-smoothing: antialiased;
-}
-
-.icon-arrow-right:before {
-	content: "\e00d";
-	top: inherit;;
-}
-
 /* general style for the form */
 .nl-form {
 	width: 100%;
@@ -321,10 +230,16 @@ input:focus::-ms-input-placeholder {
 
 /* submit button */
 .nl-submit-wrap {
-	margin-top: 0.9em;
+	margin-top: 0.6em;
 }
 
 .nl-form .nl-submit {
+	border-radius: 50px;
+	border: 2px solid #fff;
+	color: #fff;
+	overflow: hidden;
+	font-family: inherit;
+
 	line-height: 3;
 	text-transform: uppercase;
 	cursor: pointer;
@@ -349,10 +264,12 @@ input:focus::-ms-input-placeholder {
 .no-touch .nl-form .nl-submit:hover,
 .no-touch .nl-form .nl-submit:active {
 	background: #41295a;
+	/*background: rgba(85, 26, 139, 0.5);*/
 }
 
 .no-touch .nl-form .nl-submit:hover:before {
 	background: #663096;
+	/*background: rgba(85, 26, 139, 0.5);*/
 }
 
 /* overlay becomes visible when a field is opened */
@@ -389,4 +306,95 @@ input:focus::-ms-input-placeholder {
 	.nl-form {
 		font-size: 2em;
 	}
+}
+
+/* General button style (reset) */
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Button 4 */
+.btn-4 {
+	border-radius: 50px;
+	border: 3px solid #fff;
+	color: #fff;
+	overflow: hidden;
+}
+
+.btn-4:active {
+	border-color: #44146f;
+	color: #44146f;
+}
+
+.btn-4:hover {
+	/*background: #551A8B;*/
+	background: rgba(85, 26, 139, 0.5);
+}
+
+.btn-4:before {
+	position: absolute;
+	height: 100%;
+	font-size: 125%;
+	line-height: 3.5;
+	color: #fff;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-4:active:before {
+	color: #44146f;
+}
+
+/* Button 4a */
+.btn-4a:before {
+	left: 130%;
+	top: 0;
+}
+
+.btn-4a:hover:before {
+	left: 80%;
+}
+
+/* Pseudo elements for icons */
+.btn:before {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	position: absolute;	/* changed from relative */
+	-webkit-font-smoothing: antialiased;
+}
+
+.icon-arrow-right:before {
+	content: "\e00d";
+	top: inherit;;
 }
