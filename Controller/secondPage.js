@@ -35,38 +35,45 @@ router.get('/searchPost',(req, res)=>{
   /* search through all the post in the db */
   db.post.findAll({
     where:{
-      // $or:[
-        // {
-          title:queryParam
-        // }
-      //   {
-      //     type:queryParam
-      //   },
-      //   {
-      //     category:queryParam
-      //   },
-      //   {
-      //     city:queryParam
-      //   },{
-      //     info:queryParam
-      //   }
-      // ]
+      $or:[
+          {
+           title:{$like : '%'+queryParam+'%'}
+          },
+          {
+            type:{$like: '%'+queryParam+'%'}
+          },
+          {
+            category:{$like: '%'+queryParam+'%'},
+          },
+          {
+            city:{$like: '%'+queryParam+'%'}
+          },
+          {
+            info:{$like: '%'+queryParam+'%'}
+          }
+      ]
     }
 }).then((posts) => {
-  console.log(posts);
+  console.log("get through here search successful!");
+  // console.log(res.json(posts));
   if(posts.length === 0){
-    res.redirect('/secondPage');
-    return res.status(404).send('no post is found');
+    // res.redirect('/secondPage');
+    return res.status(404).redirect('/secondPage');
   } else {
-    res.render('secondPage',{
-      lists: posts
-    });
-    return res.status(200);
+    // res.render('secondPage',{
+    //   lists: posts
+    // });
+    // console.log('herererere');
+    return res.status(200).redirect('/serachPost?'+posts);
   }
 
 }).catch((e)=>{
   console.log("here");
   res.status(400).json(e);
+});
+
+router.get('/searchPost?',(req,res)=>{
+  res.send(req.query);
 });
 
   // var searchVal = req.param('search1', null);
