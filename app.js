@@ -23,11 +23,7 @@ app.get('/', (req, res)=>{
   res.render("frontPage2");
 });
 
-<<<<<<< HEAD
-
-app.get('/secondPage', (req,res)=>{
-=======
-app.get('/frontPage', (req, res)=>{
+app.get('/frontPage2', (req, res)=>{
   // res.send('Hello Mo better!!');
   res.render("frontPage");
 });
@@ -37,8 +33,7 @@ app.get('/frontPage2', (req, res)=>{
   res.render("frontPage2");
 });
 
-app.get('/secondPage', (req,res)=>{ 
->>>>>>> 15adc6b15b96cc1f03f05ee03aff9c83e8c96aca
+app.get('/secondPage', (req,res)=>{
   var contents = fs.readFileSync("info.json");
   var jsonContent = JSON.parse(contents);
   res.render('secondPage',{
@@ -52,8 +47,8 @@ app.get('/supportPage', (req, res)=>{
   res.render('supportPage');
 });
 
-app.get('/postPage', (req, res)=>{
-  res.render('postPage');
+app.get('/postPage2', (req, res)=>{
+  res.render('postPage2');
 });
 
 app.post('/searchPost',(req, res)=>{
