@@ -17,7 +17,7 @@ if (env === 'production'){ // only true when running on heroku
 }
 
 
-var db = []
+var db = {}
 
 /* load model from different file so that you can keep it organize */
 db.post = sequelize.import('./Models/post.js');
