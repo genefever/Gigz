@@ -24,7 +24,7 @@ module.exports = (sequelize,DataTypes) => {
       type:DataTypes.INTEGER,
       validate: {
         len:[1,15],
-        isNumeric: true // will only allow numbers
+        // isNumeric: true // will only allow numbers
       }
     },
     // contactOption:{

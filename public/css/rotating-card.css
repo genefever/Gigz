@@ -2,7 +2,11 @@ body {
 	margin-top: 60px;
 	font-size: 14px;
 	font-family: "Helvetica Nueue",Arial,Verdana,sans-serif;
-	background-color: #E5E9ED;
+	/*background-color: #E5E9ED;*/
+	/*background-color: #FAE5FF;*/
+   background: #41295a;
+	background: -webkit-linear-gradient(to left, #41295a , #2F0743);
+	background: linear-gradient(to left, #41295a , #2F0743);
 }
 .btn:hover,
 .btn:focus,
@@ -56,7 +60,7 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: #FFF;
+	background-color: #FAE5FF;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
 }
 
@@ -147,8 +151,8 @@ body {
     margin-bottom: 20px;
 }
 .card .footer {
-    border-top: 1px solid #EEEEEE;
-    color: #999999;
+    /*border-top: 1px solid #EEEEEE;
+    color: #999999;*/
     margin: 0px 0 0;
     padding: 0px 0 0;
     text-align: center;

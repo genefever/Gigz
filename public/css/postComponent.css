@@ -16,12 +16,18 @@
 	top: 0;
 	left: 0;
 	margin: 0;
-	padding: 40px;
+	padding: 19px;
 	width: 100%;
 }
 
 .fs-title h1 {
+	font-family: Hipster, sans-serif;
+  color: #FFF;
+	font-size: 2.625em;
+	line-height: 1.3;
 	margin: 0;
+	font-weight: 200;
+	margin-left: .5em;
 }
 
 /* Form */
@@ -167,7 +173,7 @@ button.fs-continue,
 .fs-form-overview .fs-fields > li,
 .no-js .fs-form .fs-fields > li {
 	margin: 1em 0 2em;
-	padding: 0 0 2em 0;
+	/*padding: 0 0 2em 0;*/
 	border-bottom: 2px solid rgba(0,0,0,0.1);
 }
 
@@ -242,11 +248,11 @@ button.fs-continue,
 	padding: 0 0 0.15em;
 	width: 100%;
 	border: none;
-	border-bottom: 2px solid rgba(0,0,0,0.2);
+	border-bottom: 2px solid white;
 	background-color: transparent;
 	color: #FAE5FF;
 	text-overflow: ellipsis;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	font-size: 1.5em;
 	border-radius: 0;
 }
@@ -373,10 +379,10 @@ button.fs-continue,
 	padding: 0.25em;
 	width: 100%;
 	height: 200px;
-	border: 2px solid rgba(0,0,0,0.2);
+	border: 2px solid white;
 	background-color: transparent;
 	color: #FAE5FF;
-	font-weight: 700;
+	/*font-weight: 700;*/
 	font-size: 0.85em;
 	resize: none;
 }
@@ -433,7 +439,7 @@ button.fs-continue,
 /* placeholder */
 .fs-fields input::-webkit-input-placeholder,
 .fs-fields textarea::-webkit-input-placeholder {
-	color: rgba(0,0,0,0.1);
+	color: rgba(1,1,1,0.3);
 }
 
 .fs-fields input:-moz-placeholder,
@@ -530,7 +536,7 @@ button.fs-continue,
 	color: #FAE5FF;
 	margin: 40px;
 	width: 2em;
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 2em;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	cursor: default;
@@ -668,7 +674,8 @@ button.fs-continue:hover {
 	line-height: 3;
 	text-align: center;
 	background: transparent;
-	color: rgba(0,0,0,0.3);
+	color: #FAE5FF;
+	opacity: 0.5;
 	content: 'or press ENTER';
 	font-size: 0.65em;
 	pointer-events: none;
