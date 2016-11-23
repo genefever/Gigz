@@ -16,7 +16,7 @@ router.get('/', (req, res)=>{
   res.render("frontPage2");
 });
 
-router.get('/frontPage2', (req, res)=>{
+router.get('/frontPage', (req, res)=>{
   // res.send('Hello Mo better!!');
   res.render("frontPage");
 });
