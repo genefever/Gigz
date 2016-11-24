@@ -18,6 +18,7 @@ router.get('/', (req, res)=>{
 
 router.get('/frontPage', (req, res)=>{
   // res.send('Hello Mo better!!');
+  // render if it goes to frontPage
   res.render("frontPage",{
     ab_test: false
   });
@@ -25,6 +26,8 @@ router.get('/frontPage', (req, res)=>{
 
 router.get('/frontPage2', (req, res)=>{
   // res.send('Hello Mo better!!');
+  // render if it goes to frontPage2 with true, but it is in the same page
+  // frontPage.ejs
   res.render("frontPage",{
     ab_test: true
   });
