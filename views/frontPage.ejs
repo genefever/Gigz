@@ -12,6 +12,7 @@
 	</head>
 
 	<body class="nl-blurred">
+
 		<div class="container demo-1">
 			<!-- Top Navigation -->
 			<header>
@@ -21,7 +22,7 @@
 			<div class="main clearfix">
 				<% if (ab_test){ %>
 					<span>Learn a new skill. Spread the knowledge.</span>
-					<form id="nl-form" class="nl-form" action="/searchPost" method="POST">
+					<form id="nl-form" class="nl-form" action="/searchPost" method="GET">
 						I am
 						<select>
 							<option value="1" selected>looking for</option>
@@ -68,18 +69,19 @@
 
 		<script src="js/nlform.js"></script>
 		<!-- setting up google analytics -->
+
+		<script>
+			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+		</script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-		  ga('create', 'UA-87969528-1', 'auto');
+		  ga('create', 'UA-88037994-1', 'auto');
 		  ga('send', 'pageview');
 
-		</script>
-		<script>
-			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
 		</script>
 	</body>
 </html>
