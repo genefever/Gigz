@@ -16,6 +16,7 @@ router.get('/', (req, res)=>{
   res.render("frontPage2");
 });
 
+
 router.get('/frontPage', (req, res)=>{
   // res.send('Hello Mo better!!');
   // render if it goes to frontPage
