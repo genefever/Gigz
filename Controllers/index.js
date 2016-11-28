@@ -16,11 +16,12 @@ router.get('/', (req, res)=>{
   res.render("frontPage2");
 });
 
+
 router.get('/frontPage', (req, res)=>{
   // res.send('Hello Mo better!!');
   // render if it goes to frontPage
   res.render("frontPage",{
-    ab_test: false
+    ab_test: true
   });
 });
 
@@ -29,7 +30,7 @@ router.get('/frontPage2', (req, res)=>{
   // render if it goes to frontPage2 with true, but it is in the same page
   // frontPage.ejs
   res.render("frontPage",{
-    ab_test: true
+    ab_test: false
   });
 });
 
