@@ -28,8 +28,9 @@ var fs = require('fs'),
 router.get('/',(req, res)=>{
   var queryParam = req.param('search1', null);
   console.log(queryParam + 'queryParam');
-  var key = (db.env === 'production') ? '$iLike' : '$like';
-  console.log(key);
+
+  // this is for the production or for development since sqlite and postgres has 
+  // various queries
   var where = (db.env === 'production') ? {
     $or:[
         {
@@ -66,7 +67,7 @@ router.get('/',(req, res)=>{
           info:{$like: '%'+queryParam+'%'}
         }
     ]
-  } 
+  }
 
   // var contents = fs.readFileSync("info.json");
   // var jsonContent = JSON.parse(contents);
