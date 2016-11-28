@@ -46,9 +46,9 @@ router.get('/',(req, res)=>{
           {
             type:{$like: '%'+queryParam+'%'}
           },
-          // {
-          //   name:{$like: '%'+queryParam+'%'},
-          // },
+          {
+            name:{$like: '%'+queryParam+'%'},
+          },
           {
             city:{$like: '%'+queryParam+'%'}
           },
@@ -56,7 +56,8 @@ router.get('/',(req, res)=>{
             info:{$like: '%'+queryParam+'%'}
           }
       ]
-    }
+    },
+    order: '"createdAt" DESC' // find it all based on the created last to first
 }).then((posts) => {
   console.log("get through here search successful! for searchPost.js");
   // console.log(res.json(posts));
@@ -64,6 +65,10 @@ router.get('/',(req, res)=>{
     // res.redirect('/secondPage');
     return res.redirect('/secondPage');
   } else {
+    posts.forEach((post) => {
+      console.log('This is the result of the search post');
+      console.log(post);
+    });
     // res.render('secondPage',{
     //   lists: posts
     // });

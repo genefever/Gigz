@@ -21,7 +21,7 @@ app.use(express.static('public')); // get the css file in public
 app.use(require('./Controllers'));
 console.log("Here");
 
-db.sequelize.sync({force:true}).then(()=>{
+db.sequelize.sync({force:false}).then(()=>{
   app.listen(port, ()=>{
     console.log("Server listen in localhost 3000.....");
   });
