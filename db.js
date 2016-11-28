@@ -24,6 +24,7 @@ db.post = sequelize.import('./Models/post.js');
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+db.env = env;
 
 
 module.exports = db;
