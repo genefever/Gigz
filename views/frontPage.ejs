@@ -45,7 +45,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 					</select>
 					<br />
 
-					<input type="text" id="any" value="" name="search1" placeholder="any" data-subline="Example: <em>lawn mowing</em> or <em>guitar lessons</em>"/>
+					<input type="text" id="search1" value="" name="search1" placeholder="any" data-subline="Example: <em>lawn mowing</em> or <em>guitar lessons</em>"/>
 					Gigz near
 
 					<input type="text" value="" placeholder="me" data-subline="Example: <em>Los Angeles</em> or <em>New York</em>"/>
@@ -63,7 +63,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 						I am looking for
 						<br />
 						<img src="img/search_icon.png" height="45" width="45"/>
-						<input type="text" id="any" value="" name="search1" placeholder="any" data-subline="Example: <em>lawn mowing</em> or <em>guitar lessons</em>"/>
+						<input type="text" id="search1" value="" name="search1" placeholder="any" data-subline="Example: <em>lawn mowing</em> or <em>guitar lessons</em>"/>
 						Gigz
 						<br />
 						near
@@ -91,7 +91,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			<script type="text/javascript" >
 				(function() {
 					document.getElementById("b").onclick = function() {
-						if(document.getElementById("any").value != "")
+						if(document.getElementById("search1").value != "")
 							ga('send', 'event', 'search', 'click');
 					}
 				})();

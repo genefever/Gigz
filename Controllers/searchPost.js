@@ -28,6 +28,47 @@ var fs = require('fs'),
 router.get('/',(req, res)=>{
   var queryParam = req.param('search1', null);
   console.log(queryParam + 'queryParam');
+
+  // this is for the production or for development since sqlite and postgres has 
+  // various queries
+  var where = (db.env === 'production') ? {
+    $or:[
+        {
+         title:{$iLike : '%'+queryParam+'%'}
+        },
+        {
+          type:{$iLike: '%'+queryParam+'%'}
+        },
+        {
+          name:{$iLike: '%'+queryParam+'%'},
+        },
+        {
+          city:{$iLike: '%'+queryParam+'%'}
+        },
+        {
+          info:{$iLike: '%'+queryParam+'%'}
+        }
+    ]
+  } : {
+    $or:[
+        {
+         title:{$like : '%'+queryParam+'%'}
+        },
+        {
+          type:{$like: '%'+queryParam+'%'}
+        },
+        {
+          name:{$like: '%'+queryParam+'%'},
+        },
+        {
+          city:{$like: '%'+queryParam+'%'}
+        },
+        {
+          info:{$like: '%'+queryParam+'%'}
+        }
+    ]
+  }
+
   // var contents = fs.readFileSync("info.json");
   // var jsonContent = JSON.parse(contents);
   // var abc = jsonContent.lists;
@@ -38,25 +79,8 @@ router.get('/',(req, res)=>{
       // searches.push(abc[i]);
   // }
   db.post.findAll({
-    where:{
-      $or:[
-          {
-           title:{$like : '%'+queryParam+'%'}
-          },
-          {
-            type:{$like: '%'+queryParam+'%'}
-          },
-          // {
-          //   name:{$like: '%'+queryParam+'%'},
-          // },
-          {
-            city:{$like: '%'+queryParam+'%'}
-          },
-          {
-            info:{$like: '%'+queryParam+'%'}
-          }
-      ]
-    }
+    where: where,
+    order: '"createdAt" DESC' // find it all based on the created last to first
 }).then((posts) => {
   console.log("get through here search successful! for searchPost.js");
   // console.log(res.json(posts));
@@ -64,6 +88,10 @@ router.get('/',(req, res)=>{
     // res.redirect('/secondPage');
     return res.redirect('/secondPage');
   } else {
+    posts.forEach((post) => {
+      console.log('This is the result of the search post');
+      console.log(post);
+    });
     // res.render('secondPage',{
     //   lists: posts
     // });
