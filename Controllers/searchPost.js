@@ -26,48 +26,63 @@ var fs = require('fs'),
 // });
 // searches = [];
 router.get('/',(req, res)=>{
-  var queryParam = req.param('search1', null);
-  console.log(queryParam + 'queryParam');
+  // var queryParam = req.param('search1', null);
+  var queryParam = req.query
+  var search1 = queryParam.search1; // get the result from the search 1
+  var location = queryParam.location;
+  console.log(queryParam + 'queryParam' + search1 + ' : search1' + location + ' : location');
 
-  // this is for the production or for development since sqlite and postgres has 
+  // this is for the production or for development since sqlite and postgres has
   // various queries
   var where = (db.env === 'production') ? {
     $or:[
         {
-         title:{$iLike : '%'+queryParam+'%'}
+         title:{$iLike : '%'+search1+'%'}
         },
         {
-          type:{$iLike: '%'+queryParam+'%'}
+          type:{$iLike: '%'+search1+'%'}
         },
         {
-          name:{$iLike: '%'+queryParam+'%'},
+          name:{$iLike: '%'+search1+'%'},
         },
         {
-          city:{$iLike: '%'+queryParam+'%'}
+          city:{$iLike: '%'+search1+'%'},
         },
         {
-          info:{$iLike: '%'+queryParam+'%'}
+          info:{$iLike: '%'+search1+'%'}
         }
     ]
   } : {
     $or:[
         {
-         title:{$like : '%'+queryParam+'%'}
+         title:{$like : '%'+search1+'%'}
         },
         {
-          type:{$like: '%'+queryParam+'%'}
+          type:{$like: '%'+search1+'%'}
         },
         {
-          name:{$like: '%'+queryParam+'%'},
+          name:{$like: '%'+search1+'%'},
         },
         {
-          city:{$like: '%'+queryParam+'%'}
+            city:{$like: '%'+search1+'%'},
         },
         {
-          info:{$like: '%'+queryParam+'%'}
+          info:{$like: '%'+search1+'%'}
         }
     ]
   }
+
+  if(location) {
+    if(db.env === 'development'){
+      where.city = {
+        $like : '%' + location + '%'
+      }
+    } else {
+    where.city = {
+      $iLike: '%' + location + '%'
+    }
+  }
+}
 
   // var contents = fs.readFileSync("info.json");
   // var jsonContent = JSON.parse(contents);
@@ -86,7 +101,7 @@ router.get('/',(req, res)=>{
   // console.log(res.json(posts));
   if(posts.length === 0){
     // res.redirect('/secondPage');
-    return res.redirect('/secondPage');
+    return res.render('errorPage');
   } else {
     posts.forEach((post) => {
       console.log('This is the result of the search post');
@@ -108,6 +123,8 @@ router.get('/',(req, res)=>{
 
   // searches = [];
 });
+
+
 
 
 
